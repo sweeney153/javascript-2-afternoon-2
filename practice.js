@@ -17,8 +17,9 @@ var arr = [10,20,30];
   Return the first item in the given array.
 */
 
-//Code Here
-
+function first(arr) {
+return arr[0];
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -32,7 +33,9 @@ var arr = [40,50,60];
   Return the last item in the given array.
 */
 
-//Code Here
+function last(arr) {
+  return arr[2];
+}
 
 
 
@@ -47,8 +50,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
   Loop through the given array and alert every item in the array.
 */
 
-//Code Here
-
+function looper(family) {
+  for (var i = 0; i <family.length; i++){
+   alert(family[i]);
+  }
+};
 
 
 ////////// PROBLEM 4 //////////
@@ -62,8 +68,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   Loop backwards, starting at the end of the letters array, alerting every item in the array.
 */
 
-//Code Here
-
+function reversedLooper(letters) {
+  for (var i = letters.length - 1; i >=0; i--) {
+    alert(letters[i], i);
+  } 
+};
 
 
 ////////// PROBLEM 5 //////////
@@ -77,20 +86,20 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
   Return an array that contains the even numbers from the nums array.
 */
 
-//Code Here
-
-
-
-
+function evenFinder(nums) {
+  var evens = [];
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] %2 === 0) {
+      evens.push(nums[i])
+    }
+  }
+  return evens;
+}
 
 
 
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
-
-
-
-
 
 
 
@@ -106,7 +115,16 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   and the second item in the array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+function divider(numbersArray) {
+  var evens = [];
+  var odds =[];
+  for (var i=0; i<numbersArray.length; i++) {
+    if (numbersArray[i] %2 === 0) {
+      evens.push(numbersArray[i])
+    } else {odds.push(numbersArray[i])}
+  }
+  return [evens, odds]; 
+}
 
 
 
@@ -128,7 +146,10 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
+function finder(array) {
+  var randomNumber = getRandomArbitrary();
+  return array.indexOf(randomNumber) === -1 ? false: true;
+};
 
 
 
@@ -157,8 +178,18 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
-//Code Here
+function removeItem(myGroceryList, chips) {
+  return newList = myGroceryList.shift(0, 1)
+};
 
+
+function addItem(myGroceryList, milk) {
+  myGroceryList.push(item);
+  return newList;
+}
+
+myGroceryList.push('milk');
+myGroceryList
 
 
 ////////// PROBLEM 9 //////////
@@ -208,8 +239,13 @@ for(var i = 0; i < num2; i++){
   Return the longer of the two arrays.
 */
 
-//Code Here
-
+function longer(arr1, arr2){
+  if (arr1.length > arr2.lenght){
+    return arr1;
+  } else {
+    return arr2;
+  }
+}
 
 
 /*
@@ -220,7 +256,15 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+function both(arr1, arr2) {
+  var arr3 = [];
+  for(var i = 0; i < arr1.length; i++) {
+    for(var j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) 
+      return arr3.push();
+      }
+    }
+}
 
 
 
@@ -261,17 +305,20 @@ var colt = {
   After that, console.log the length of the Array and make sure that it's equal to 4. 
 */
 
-//Code Here
-
+devMountainEmployees.push(Joe, cahlan, ryan, colt)
+devMountainEmployees();
+console.log(devMoutainEmployees.length)
 
 
 /*
   Now let's say Cahlan has to take a leave of absence.
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
-
-//Code Here
-
+for(var i = 0; i < devMountainEmployees.length; i++) {
+  if (devMountainEmployees[i] === 'Cahlan') {
+    devMountainEmployees.splice([i], 1)
+  }
+}
 
 
 ////////// PROBLEM 13 //////////
@@ -282,7 +329,19 @@ var colt = {
   Create an empty array called users.
 */
 
-//Code Here
+var users = [
+  {name:"",
+  email:"",
+  password:"", 
+  username:""},
+  {name:"",
+  email:"",
+  password:"",
+  username:""},
+  {name:"",
+  email:"",
+  password:"",
+  username:""}]
 
 
 
@@ -303,7 +362,7 @@ var user1 = {
 };
 // Do not edit the code above.
 
-//Code Here
+users.push(user1);
 
 
 
